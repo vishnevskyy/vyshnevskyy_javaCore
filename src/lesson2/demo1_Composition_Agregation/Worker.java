@@ -18,10 +18,24 @@ public class Worker {
     public Adress adress;
     public Company company;
 
-    public Worker(String name, String phone,Adress adress,Company company) {
+    public Worker(String name, String phone) {
         this.name = name;
         this.phone = phone;
-        this.adress=adress;
-        this.company=company;
+    }
+
+    public Worker(int id,
+                  String name,
+                  String street,
+                  String suite,
+                  String city,
+                  String zipcode,
+                  String companyName,
+                  String catchPhrase,
+                  String bs
+    ) {
+        this.id = id;
+        this.name = name;
+        this.adress = new Adress(street,suite,city,zipcode);
+        this.company = new Company(companyName,catchPhrase,bs);
     }
 }

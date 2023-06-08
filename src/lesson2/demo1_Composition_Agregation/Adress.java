@@ -5,9 +5,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
-@AllArgsConstructor
 @Data
-
+@AllArgsConstructor
 public class Adress {
     String street;
     String suite;
