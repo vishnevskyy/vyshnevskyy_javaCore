@@ -8,7 +8,7 @@ import java.util.ArrayList;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
+public class User implements Comparable<User> {
     int id;
     String name;
     String surname;
@@ -27,5 +27,10 @@ public class User {
         this.gender = gender;
         this.skills = skills;
         this.car = new Car(model,year,power);
+    }
+
+    @Override
+    public int compareTo(User o) {
+        return this.id - o.getId();
     }
 }
